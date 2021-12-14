@@ -30,6 +30,18 @@ const handleMainDom = (mainDom) => {
 
     nextButton.addEventListener("click", () => {
         console.log(selected, "선택된 것")
+        if (selected === null) {
+            alert("체크박스 선택해주세요!")
+            return
+        }
+        if (selected === "왼쪽") {
+            mainDom.innerHTML = leftResultHtml
+            return
+        }
+        if (selected === "오른쪽") {
+            mainDom.innerHTML = rightResultHtml
+            return
+        }
     })
 }
 
